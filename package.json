@@ -4,14 +4,16 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --history-api-fallback",
     "prod": "webpack -p"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "axios": "^0.17.1",
