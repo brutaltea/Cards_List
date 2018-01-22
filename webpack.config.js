@@ -22,9 +22,13 @@ const config = {
 				}]
 			},
 			{
-				test: /\.js$/, 
+				test: /\.js$/,
 				use: 'babel-loader',
 				exclude: /node_modules/
+			},
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: 'file-loader'
 			}
 		]
 	},

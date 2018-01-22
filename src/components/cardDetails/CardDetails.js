@@ -10,7 +10,7 @@ export class CardDetails extends React.Component {
 
   componentDidMount() {
 		axios({
-			url: 'https://omgvamp-hearthstone-v1.p.mashape.com/cards/'+this.props.match.params.name+'?collectible=1',
+			url: `https://omgvamp-hearthstone-v1.p.mashape.com/cards/${this.props.match.params.name}?collectible=1`,
 			method: 'get',
 			headers: {
 				'X-Mashape-Key': 'Ov7oxQ9w0Umsh201lFfQlJZEwDcgp1SKLVajsnza8LaqAZ1wir',
@@ -37,5 +37,3 @@ export class CardDetails extends React.Component {
     );
   }
 }
-
-//export default ({match: {params: {name}}}) => <h1>{name}</h1>;

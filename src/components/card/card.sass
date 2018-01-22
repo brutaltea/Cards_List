@@ -1,0 +1,22 @@
+.grid
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  grid-auto-rows: minmax(50px, auto)
+  width: 100%
+  margin: 0 auto
+  grid-template-areas: "name name name name name set set set set faction type cost"
+  grid-column-gap: 10px
+
+
+
+.name
+  grid-area: name
+  padding-left: 20px
+.set
+  grid-area: set
+.faction
+  grid-area: faction
+.type
+  grid-area: type
+.cost
+  grid-area: cost

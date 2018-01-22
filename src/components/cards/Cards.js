@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+
 
 import { Card } from '../card/Card';
 import { CardDetails } from '../cardDetails/CardDetails';
@@ -23,8 +23,7 @@ export class Cards extends React.Component {
 			}
 		})
 		.then(response => {
-			var data = response.data
-			var counter = 0;
+			var data = response.data;
 			var arr = [];
 			for (var key in data) {
 				data[key].map(function(items){
@@ -43,19 +42,18 @@ export class Cards extends React.Component {
     return (
       <div>
 				<h1>Hearthstone Cards</h1>
-				{this.state.arr.map(item => 
-					<Link key={item.cardId} to={`${this.props.match.url}/${item.name}`}>
+				{this.state.arr.map(item =>
             <Card
               key={item.cardId}
+              id={item.cardId}
               name={item.name}
               cardSet={item.cardSet}
               faction={item.faction}
               type={item.type}
               cost={item.cost}
             />
-          </Link>
         )}
-        
+
 			</div>
     );
   }
