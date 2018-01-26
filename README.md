@@ -1,1 +1,1 @@
-hsCards
+hearthstone cards list
