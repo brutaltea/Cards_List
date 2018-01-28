@@ -18,6 +18,12 @@
   @media (min-width: 1800px)
     @content
 
+.nav-wrapper
+  @include for-desktop-up
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
 .navigation-panel
   padding: 10px 20px 10px 20px
   border-bottom: 2px solid #FFDEAD
@@ -86,6 +92,7 @@
 .nav-link-selected
   border-color: #FFDEAD
 .banner
+  margin-top: 107px
   display: none
   height: 297px
   background-image: url(../../imgs/banner.jpg)

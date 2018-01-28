@@ -1,22 +1,58 @@
-.grid
+.card-grid
   display: grid
   grid-template-columns: repeat(12, 1fr)
-  grid-auto-rows: minmax(50px, auto)
+  grid-auto-rows: minmax(40px, auto)
   width: 100%
   margin: 0 auto
-  grid-template-areas: "name name name name name set set set set faction type cost"
-  grid-column-gap: 10px
-
-
-
+  line-height: 40px
+  grid-template-areas: "name name name name name name faction rarity type cost attack health"
+  background-color: white
+  color: #A58668
+  &:hover
+    background-color: #FFEFD7
+  div
+    border-right: 1px solid #8B7D6B
+    border-bottom: 1px solid #8B7D6B
+    text-align: center
+    margin-right: -1px
+    &:first-child
+      text-align: left
+      border-left: 1px solid #8B7D6B
+    &:last-child
+      margin-right: -2px
 .name
   grid-area: name
   padding-left: 20px
-.set
-  grid-area: set
+.rarity
+  grid-area: rarity
 .faction
   grid-area: faction
 .type
   grid-area: type
 .cost
   grid-area: cost
+.attack
+  grid-area: attack
+.health
+
+  grid-area: health
+.text
+  grid-area: text
+  padding-left: 20px
+.Rare
+  a, .rarity
+    color: #0070DD
+.Epic
+  a, .rarity
+    color: #A335EE
+.Legendary
+  a, .rarity
+    color: #FF8000
+.Common
+  a, .rarity
+    color: #2ECC71
+a
+  color: #A58668
+  text-decoration: none
+  &:hover
+    color: white

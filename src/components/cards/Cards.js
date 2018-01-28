@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+import './cards.sass'
 
 import { Card } from '../card/Card';
 import { CardDetails } from '../cardDetails/CardDetails';
@@ -40,17 +41,30 @@ export class Cards extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="cards-block">
 				<h1>Hearthstone Cards</h1>
-				{this.state.arr.map(item =>
+        <div className="table-heading">
+          <div className="table-cell name">Name</div>
+          <div className="table-cell faction">Class</div>
+          <div className="table-cell rarity">Rarity</div>
+          <div className="table-cell type">Type</div>
+          <div className="table-cell cost"></div>
+          <div className="table-cell attack"></div>
+          <div className="table-cell health"></div>
+        </div>
+				{this.state.arr.map(card =>
             <Card
-              key={item.cardId}
-              id={item.cardId}
-              name={item.name}
-              cardSet={item.cardSet}
-              faction={item.faction}
-              type={item.type}
-              cost={item.cost}
+              key={card.cardId}
+              id={card.cardId}
+              name={card.name}
+              cardSet={card.cardSet}
+              faction={card.playerClass}
+              type={card.type}
+              cost={card.cost}
+              attack={card.attack}
+              health={card.health}
+              rarity={card.rarity}
+              text={card.text}
             />
         )}
 

@@ -16,20 +16,22 @@ export class Navigation extends React.Component {
     return (
       <Router>
         <div>
-          <div className="navigation-panel">
-            <NavLink exact to="/" className="heading">
-              <div className="logo" alt="LOGO"></div>
-              <span className="big-letters">Hearthstone</span><br></br>
-              <span className="small-letters">Cards Catalogue</span>
-            </NavLink>
-            <ul className="nav">
-              <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="nav-link-selected" to="/sets">Sets</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="nav-link-selected" to="/cards">Cards</NavLink>
-              </li>
-            </ul>
+          <div className="nav-wrapper">
+            <div className="navigation-panel">
+              <NavLink exact to="/" className="heading">
+                <div className="logo" alt="LOGO"></div>
+                <span className="big-letters">Hearthstone</span><br></br>
+                <span className="small-letters">Cards Catalogue</span>
+              </NavLink>
+              <ul className="nav">
+                <li className="nav-item">
+                  <NavLink className="nav-link" activeClassName="nav-link-selected" to="/sets">Sets</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" activeClassName="nav-link-selected" to="/cards">Cards</NavLink>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="banner"></div>
 
